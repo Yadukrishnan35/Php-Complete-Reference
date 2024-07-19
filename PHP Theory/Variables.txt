@@ -1,0 +1,105 @@
+Php variables
+=============
+As PHP is a loosely typed language, so we do not need to declare the data types of the variables. 
+It automatically analyzes the values and makes conversions to its correct datatype.
+
+ules for declaring PHP variable:
+
+1.A variable must start with a dollar ($) sign, followed by the variable name.
+2.It can only contain alpha-numeric character and underscore (A-z, 0-9, _).
+3.A variable name must start with a letter or underscore (_) character.
+4.A PHP variable name cannot contain spaces.
+5.One thing to be kept in mind that the variable name cannot start with a number or special symbols.
+6.PHP variables are case-sensitive, so $name and $NAME both are treated as different variable.
+
+Variable Scope
+==============
+
+The scope of a variable is defined as its range in the program under which it can be accessed. In other words, "The scope of a variable is the portion of the program within which it is defined and can be accessed."
+
+PHP has three types of variable scopes:
+
+1.Local variable
+2.Global variable
+3.Static variable
+
+Local variable
+==============
+The variables that are declared within a function are called local variables for that function. 
+These local variables have their scope only in that particular function in which they are declared. 
+This means that these variables cannot be accessed outside the function, as they have local scope.
+
+Global Variable
+===============
+The global variables are the variables that are declared outside the function. 
+These variables can be accessed anywhere in the program. 
+To access the global variable within a function, use the GLOBAL keyword before the variable. 
+However, these variables can be directly accessed or used outside the function without any keyword. 
+Therefore there is no need to use any keyword to access a global variable outside the function.
+
+Example:- 
+<?php  
+    $name = "Sanaya Sharma";        //Global Variable  
+    function global_var()  
+    {  
+        global $name;  
+        echo "Variable inside the function: ". $name;  
+        echo "</br>";  
+    }  
+    global_var();  
+    echo "Variable outside the function: ". $name;  
+?>  
+
+Note: - If two variables, local and global, have the same name, 
+then the local variable has higher priority than the global variable inside the function.
+<?php  
+    $x = 5;  
+    function mytest()  
+    {  
+        $x = 7;  
+        echo "value of x: " .$x;  
+    }  
+    mytest();  
+?> 
+
+Static variable 
+===============
+It is a feature of PHP to delete the variable, once it completes its execution and memory is freed. 
+Sometimes we need to store a variable even after completion of function execution. 
+Therefore, another important feature of variable scoping is static variable. 
+We use the static keyword before the variable to define a variable, 
+and this variable is called as static variable.
+
+Static variables exist only in a local function, 
+but it does not free its memory after the program execution leaves the scope. 
+Understand it with the help of an example:
+
+<?php  
+    function static_var()  
+    {  
+        static $num1 = 3;       //static variable  
+        $num2 = 6;          //Non-static variable  
+        //increment in non-static variable  
+        $num1++;  
+        //increment in static variable  
+        $num2++;  
+        echo "Static: " .$num1 ."</br>";  
+        echo "Non-static: " .$num2 ."</br>";  
+    }  
+      
+//first function call  
+    static_var();  
+  
+    //second function call  
+    static_var();  
+?>  
+
+Output:-
+Static: 4
+Non-static: 7
+Static: 5
+Non-static: 7
+
+You have to notice that $num1 regularly increments after each function call, whereas $num2 does not. 
+This is why because $num1 is not a static variable, 
+so it freed its memory after the execution of each function call.

@@ -1,0 +1,44 @@
+PHP echo
+==========
+PHP echo statement can be used to print the string, multi-line strings, 
+escaping characters, variable, array, etc.
+ Some important points that you must know about the echo statement are:
+
+1.echo is a statement, which is used to display the output.
+2.echo can be used with or without parentheses: echo(), and echo.
+3.echo does not return any value.
+4.We can pass multiple strings separated by a comma (,) in echo.
+  echo is faster than the print statement.
+
+
+print
+=====
+Like PHP echo, PHP print is a language construct, so you don't need to use parenthesis with the argument list. 
+Print statement can be used with or without parentheses: print and print(). Unlike echo, it always returns 1.
+
+1.print is a statement, used as an alternative to echo at many times to display the output.
+2.print can be used with or without parentheses.
+3.print always returns an integer value, which is 1.
+4.Using print, we cannot pass multiple arguments.
+5.print is slower than the echo statement.
+
+Difference between echo and print
+==================================
+echo
+====
+echo is a statement, which is used to display the output.
+echo can be used with or without parentheses.
+echo does not return any value.
+We can pass multiple strings separated by comma (,) in echo.
+echo is faster than print statement.
+
+print
+=====
+print is also a statement, used as an alternative to echo at many times to display the output.
+print can be used with or without parentheses.
+print always returns an integer value, which is 1.
+Using print, we cannot pass multiple arguments.
+print is slower than echo statement.
+
+
+

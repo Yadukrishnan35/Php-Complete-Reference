@@ -1,0 +1,40 @@
+Case sensitive in Php
+=======================
+PHP is partially case-sensitive. PHP constructs, function names, class names are case-insensitive, whereas variables are case-sensitive. 
+A statement ends with a semicolon (;). Whitespace and line breaks don't matter in PHP; do leverage them to make the code more readable
+
+In PHP, keyword (e.g., echo, if, else, while), functions, user-defined functions, classes are not case-sensitive. 
+However, all variable names are case-sensitive.
+
+In the below example, you can see that all three echo statements are equal and valid:
+Example:-
+<!DOCTYPE>  
+<html>  
+    <body>  
+        <?php  
+            echo "Hello world using echo </br>";  
+            ECHO "Hello world using ECHO </br>";  
+            EcHo "Hello world using EcHo </br>";  
+        ?>  
+    </body>  
+</html>  
+
+Output :- 
+Hello world using echo
+Hello world using ECHO
+Hello world using EcHo
+
+Example2:-
+<html>  
+    <body>  
+        <?php  
+            $color = "black";  
+            echo "My car is ". $ColoR ."</br>";  
+            echo "My dog is ". $color ."</br>";  
+            echo "My Phone is ". $COLOR ."</br>";  
+        ?>  
+    </body>  
+</html>  
+
+
+
